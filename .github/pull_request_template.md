@@ -1,5 +1,6 @@
 # Developer Checklist
 _Review the checklist below and confirm. Add an `x` to confirm, or a `~` if the item doesn't apply_
+
 - [ ] `dbt build` or `dbt build --select state:modified+` runs successfully in dbt Cloud IDE
 - [ ] I followed coding best practices
 - [ ] My code is clean, legible, and consistently formatted
