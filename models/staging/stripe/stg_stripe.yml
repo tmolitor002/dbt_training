@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__payments
+    description: Staged customer data from our payments data from stripe
+    columns:
+      - name: payment_id
+        description: the primary key for payements
+        tests:
+          - unique
+          - not_null
