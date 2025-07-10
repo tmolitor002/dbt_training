@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: dbt_training # may need to adjust based on your database name
+    schema: raw
+    tables:
+      - name: customers
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: stores
+      - name: supplies
