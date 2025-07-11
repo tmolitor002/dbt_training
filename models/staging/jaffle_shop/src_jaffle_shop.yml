@@ -6,4 +6,14 @@ sources:
     schema: raw # if not explicitly named, dbt will use the value in name: above
     tables:
       - name: jaffle_shop_customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
       - name: jaffle_shop_orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
