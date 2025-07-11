@@ -2,18 +2,23 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: a clone of a Postgres database
     database: dbt_training # may need to adjust based on your database name
     schema: raw # if not explicitly named, dbt will use the value in name: above
     tables:
       - name: jaffle_shop_customers
+        description: raw customer data
         columns:
           - name: id
+            description: Primary Key for customers data
             tests:
               - unique
               - not_null
       - name: jaffle_shop_orders
+        description: raw order data
         columns:
           - name: id
+            description: Primary Key for order data
             tests:
               - unique
               - not_null
