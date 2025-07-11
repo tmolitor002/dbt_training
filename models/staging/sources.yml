@@ -1,13 +1,14 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: jaffle_shop
     database: dbt_training # may need to adjust based on your database name
+    schema: raw # if not explicitly named, dbt will use the value in name: above
+    tables:
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders
+  - name: stripe
+    database: dbt_training
     schema: raw
     tables:
-      - name: customers
-      - name: orders
-      - name: order_items
-      - name: products
-      - name: stores
-      - name: supplies
+      - name: stripe_payments
